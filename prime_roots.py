@@ -8,7 +8,7 @@ github.com/ctwtruscottwatters
 
 """
 
-
+import numpy
 def sort_tup_list_sqr_root_primes(primes, f):
     primes_and_roots = []
     for n in primes:
@@ -22,7 +22,7 @@ def bisection_sqr(prime):
     guess = (high + low) / 2.0
     epsilon = 0.0001
     while((guess ** 2 - prime) >= epsilon):
-        print("guess: {} high: {} low: {}".format(guess, high, low))
+       # print("guess: {} high: {} low: {}".format(guess, high, low))
         if guess ** 2 > prime:
             high = guess
         elif guess ** 2 < prime:
@@ -42,7 +42,17 @@ def main():
     
     primes = return_1000_primes()
     x = sort_tup_list_sqr_root_primes(primes, bisection_sqr)
-    print(x)
+    #print(x)
+    diff = []
+    index = 0
+    for n in range(0, len(x), 1):
+        if n + 1 >= len(x):
+            break
+        else:
+            print("The difference between the square root of {} and {} is {}".format(x[n][0], x[n + 1][0], x[n][1] - x[n + 1][1]))
+            print("{} and {} are both consecutively occuring primes in the natural number set".format(x[n][0], x[n + 1][0]))
+            diff.append(x[n][1] - x[n + 1][1])
+    print("The mean of the differences of the consecutively occuring primes square roots are: {}; the median: {} the mode(s): {}".format(numpy.mean(diff), numpy.median(diff), numpy.unique(diff)))
 if __name__ == "__main__": main()
 
 """ 
@@ -56,4 +66,505 @@ Charles Thomas Wallace Truscott, Byron Bay NSW 2481
 
 Thank you Eric Grimson, Ana Bell, edX Corporate Offices
 
+"""
+
+"""
+501 and 499 are both consecutively occuring primes in the natural number set
+The difference between the square root of 499 and 497 is 0.0625
+499 and 497 are both consecutively occuring primes in the natural number set
+The difference between the square root of 497 and 495 is 0.0625
+497 and 495 are both consecutively occuring primes in the natural number set
+The difference between the square root of 495 and 493 is 0.0625
+495 and 493 are both consecutively occuring primes in the natural number set
+The difference between the square root of 493 and 491 is 0.0625
+493 and 491 are both consecutively occuring primes in the natural number set
+The difference between the square root of 491 and 489 is 0.0625
+491 and 489 are both consecutively occuring primes in the natural number set
+The difference between the square root of 489 and 487 is 0.0625
+489 and 487 are both consecutively occuring primes in the natural number set
+The difference between the square root of 487 and 485 is 0.0625
+487 and 485 are both consecutively occuring primes in the natural number set
+The difference between the square root of 485 and 483 is 0.0625
+485 and 483 are both consecutively occuring primes in the natural number set
+The difference between the square root of 483 and 481 is 0.0625
+483 and 481 are both consecutively occuring primes in the natural number set
+The difference between the square root of 481 and 479 is 0.0625
+481 and 479 are both consecutively occuring primes in the natural number set
+The difference between the square root of 479 and 477 is 0.0625
+479 and 477 are both consecutively occuring primes in the natural number set
+The difference between the square root of 477 and 475 is 0.0625
+477 and 475 are both consecutively occuring primes in the natural number set
+The difference between the square root of 475 and 473 is 0.0625
+475 and 473 are both consecutively occuring primes in the natural number set
+The difference between the square root of 473 and 471 is 0.0625
+473 and 471 are both consecutively occuring primes in the natural number set
+The difference between the square root of 471 and 469 is 0.0625
+471 and 469 are both consecutively occuring primes in the natural number set
+The difference between the square root of 469 and 467 is 0.0625
+469 and 467 are both consecutively occuring primes in the natural number set
+The difference between the square root of 467 and 465 is 0.0625
+467 and 465 are both consecutively occuring primes in the natural number set
+The difference between the square root of 465 and 463 is 0.0625
+465 and 463 are both consecutively occuring primes in the natural number set
+The difference between the square root of 463 and 461 is 0.0625
+463 and 461 are both consecutively occuring primes in the natural number set
+The difference between the square root of 461 and 459 is 0.0625
+461 and 459 are both consecutively occuring primes in the natural number set
+The difference between the square root of 459 and 457 is 0.0625
+459 and 457 are both consecutively occuring primes in the natural number set
+The difference between the square root of 457 and 455 is 0.0625
+457 and 455 are both consecutively occuring primes in the natural number set
+The difference between the square root of 455 and 453 is 0.0625
+455 and 453 are both consecutively occuring primes in the natural number set
+The difference between the square root of 453 and 451 is 0.0625
+453 and 451 are both consecutively occuring primes in the natural number set
+The difference between the square root of 451 and 449 is 0.0625
+451 and 449 are both consecutively occuring primes in the natural number set
+The difference between the square root of 449 and 447 is 0.0625
+449 and 447 are both consecutively occuring primes in the natural number set
+The difference between the square root of 447 and 445 is 0.0625
+447 and 445 are both consecutively occuring primes in the natural number set
+The difference between the square root of 445 and 443 is 0.0625
+445 and 443 are both consecutively occuring primes in the natural number set
+The difference between the square root of 443 and 441 is 0.0625
+443 and 441 are both consecutively occuring primes in the natural number set
+The difference between the square root of 441 and 439 is 0.0625
+441 and 439 are both consecutively occuring primes in the natural number set
+The difference between the square root of 439 and 437 is 0.0625
+439 and 437 are both consecutively occuring primes in the natural number set
+The difference between the square root of 437 and 435 is 0.0625
+437 and 435 are both consecutively occuring primes in the natural number set
+The difference between the square root of 435 and 433 is 0.0625
+435 and 433 are both consecutively occuring primes in the natural number set
+The difference between the square root of 433 and 431 is 0.0625
+433 and 431 are both consecutively occuring primes in the natural number set
+The difference between the square root of 431 and 429 is 0.0625
+431 and 429 are both consecutively occuring primes in the natural number set
+The difference between the square root of 429 and 427 is 0.0625
+429 and 427 are both consecutively occuring primes in the natural number set
+The difference between the square root of 427 and 425 is 0.0625
+427 and 425 are both consecutively occuring primes in the natural number set
+The difference between the square root of 425 and 423 is 0.0625
+425 and 423 are both consecutively occuring primes in the natural number set
+The difference between the square root of 423 and 421 is 0.0625
+423 and 421 are both consecutively occuring primes in the natural number set
+The difference between the square root of 421 and 419 is 0.0625
+421 and 419 are both consecutively occuring primes in the natural number set
+The difference between the square root of 419 and 417 is 0.0625
+419 and 417 are both consecutively occuring primes in the natural number set
+The difference between the square root of 417 and 415 is 0.0625
+417 and 415 are both consecutively occuring primes in the natural number set
+The difference between the square root of 415 and 413 is 0.0625
+415 and 413 are both consecutively occuring primes in the natural number set
+The difference between the square root of 413 and 411 is 0.0625
+413 and 411 are both consecutively occuring primes in the natural number set
+The difference between the square root of 411 and 409 is 0.0625
+411 and 409 are both consecutively occuring primes in the natural number set
+The difference between the square root of 409 and 407 is 0.0625
+409 and 407 are both consecutively occuring primes in the natural number set
+The difference between the square root of 407 and 405 is 0.0625
+407 and 405 are both consecutively occuring primes in the natural number set
+The difference between the square root of 405 and 403 is 0.0625
+405 and 403 are both consecutively occuring primes in the natural number set
+The difference between the square root of 403 and 401 is 0.0625
+403 and 401 are both consecutively occuring primes in the natural number set
+The difference between the square root of 401 and 399 is 0.0625
+401 and 399 are both consecutively occuring primes in the natural number set
+The difference between the square root of 399 and 397 is 0.0625
+399 and 397 are both consecutively occuring primes in the natural number set
+The difference between the square root of 397 and 395 is 0.0625
+397 and 395 are both consecutively occuring primes in the natural number set
+The difference between the square root of 395 and 393 is 0.0625
+395 and 393 are both consecutively occuring primes in the natural number set
+The difference between the square root of 393 and 391 is 0.0625
+393 and 391 are both consecutively occuring primes in the natural number set
+The difference between the square root of 391 and 389 is 0.0625
+391 and 389 are both consecutively occuring primes in the natural number set
+The difference between the square root of 389 and 387 is 0.0625
+389 and 387 are both consecutively occuring primes in the natural number set
+The difference between the square root of 387 and 385 is 0.0625
+387 and 385 are both consecutively occuring primes in the natural number set
+The difference between the square root of 385 and 383 is 0.0625
+385 and 383 are both consecutively occuring primes in the natural number set
+The difference between the square root of 383 and 381 is 0.0625
+383 and 381 are both consecutively occuring primes in the natural number set
+The difference between the square root of 381 and 379 is 0.0625
+381 and 379 are both consecutively occuring primes in the natural number set
+The difference between the square root of 379 and 377 is 0.0625
+379 and 377 are both consecutively occuring primes in the natural number set
+The difference between the square root of 377 and 375 is 0.0625
+377 and 375 are both consecutively occuring primes in the natural number set
+The difference between the square root of 375 and 373 is 0.0625
+375 and 373 are both consecutively occuring primes in the natural number set
+The difference between the square root of 373 and 371 is 0.0625
+373 and 371 are both consecutively occuring primes in the natural number set
+The difference between the square root of 371 and 369 is 0.0625
+371 and 369 are both consecutively occuring primes in the natural number set
+The difference between the square root of 369 and 367 is 0.0625
+369 and 367 are both consecutively occuring primes in the natural number set
+The difference between the square root of 367 and 365 is 0.0625
+367 and 365 are both consecutively occuring primes in the natural number set
+The difference between the square root of 365 and 363 is 0.0625
+365 and 363 are both consecutively occuring primes in the natural number set
+The difference between the square root of 363 and 361 is 0.0625
+363 and 361 are both consecutively occuring primes in the natural number set
+The difference between the square root of 361 and 359 is 0.0625
+361 and 359 are both consecutively occuring primes in the natural number set
+The difference between the square root of 359 and 357 is 0.0625
+359 and 357 are both consecutively occuring primes in the natural number set
+The difference between the square root of 357 and 355 is 0.0625
+357 and 355 are both consecutively occuring primes in the natural number set
+The difference between the square root of 355 and 353 is 0.0625
+355 and 353 are both consecutively occuring primes in the natural number set
+The difference between the square root of 353 and 351 is 0.0625
+353 and 351 are both consecutively occuring primes in the natural number set
+The difference between the square root of 351 and 349 is 0.0625
+351 and 349 are both consecutively occuring primes in the natural number set
+The difference between the square root of 349 and 347 is 0.0625
+349 and 347 are both consecutively occuring primes in the natural number set
+The difference between the square root of 347 and 345 is 0.0625
+347 and 345 are both consecutively occuring primes in the natural number set
+The difference between the square root of 345 and 343 is 0.0625
+345 and 343 are both consecutively occuring primes in the natural number set
+The difference between the square root of 343 and 341 is 0.0625
+343 and 341 are both consecutively occuring primes in the natural number set
+The difference between the square root of 341 and 339 is 0.0625
+341 and 339 are both consecutively occuring primes in the natural number set
+The difference between the square root of 339 and 337 is 0.0625
+339 and 337 are both consecutively occuring primes in the natural number set
+The difference between the square root of 337 and 335 is 0.0625
+337 and 335 are both consecutively occuring primes in the natural number set
+The difference between the square root of 335 and 333 is 0.0625
+335 and 333 are both consecutively occuring primes in the natural number set
+The difference between the square root of 333 and 331 is 0.0625
+333 and 331 are both consecutively occuring primes in the natural number set
+The difference between the square root of 331 and 329 is 0.0625
+331 and 329 are both consecutively occuring primes in the natural number set
+The difference between the square root of 329 and 327 is 0.0625
+329 and 327 are both consecutively occuring primes in the natural number set
+The difference between the square root of 327 and 325 is 0.0625
+327 and 325 are both consecutively occuring primes in the natural number set
+The difference between the square root of 325 and 323 is 0.0625
+325 and 323 are both consecutively occuring primes in the natural number set
+The difference between the square root of 323 and 321 is 0.0625
+323 and 321 are both consecutively occuring primes in the natural number set
+The difference between the square root of 321 and 319 is 0.0625
+321 and 319 are both consecutively occuring primes in the natural number set
+The difference between the square root of 319 and 317 is 0.0625
+319 and 317 are both consecutively occuring primes in the natural number set
+The difference between the square root of 317 and 315 is 0.0625
+317 and 315 are both consecutively occuring primes in the natural number set
+The difference between the square root of 315 and 313 is 0.0625
+315 and 313 are both consecutively occuring primes in the natural number set
+The difference between the square root of 313 and 311 is 0.0625
+313 and 311 are both consecutively occuring primes in the natural number set
+The difference between the square root of 311 and 309 is 0.0625
+311 and 309 are both consecutively occuring primes in the natural number set
+The difference between the square root of 309 and 307 is 0.0625
+309 and 307 are both consecutively occuring primes in the natural number set
+The difference between the square root of 307 and 305 is 0.0625
+307 and 305 are both consecutively occuring primes in the natural number set
+The difference between the square root of 305 and 303 is 0.0625
+305 and 303 are both consecutively occuring primes in the natural number set
+The difference between the square root of 303 and 301 is 0.0625
+303 and 301 are both consecutively occuring primes in the natural number set
+The difference between the square root of 301 and 299 is 0.0625
+301 and 299 are both consecutively occuring primes in the natural number set
+The difference between the square root of 299 and 297 is 0.0625
+299 and 297 are both consecutively occuring primes in the natural number set
+The difference between the square root of 297 and 295 is 0.0625
+297 and 295 are both consecutively occuring primes in the natural number set
+The difference between the square root of 295 and 293 is 0.0625
+295 and 293 are both consecutively occuring primes in the natural number set
+The difference between the square root of 293 and 291 is 0.0625
+293 and 291 are both consecutively occuring primes in the natural number set
+The difference between the square root of 291 and 289 is 0.0625
+291 and 289 are both consecutively occuring primes in the natural number set
+The difference between the square root of 289 and 287 is 0.0625
+289 and 287 are both consecutively occuring primes in the natural number set
+The difference between the square root of 287 and 285 is 0.0625
+287 and 285 are both consecutively occuring primes in the natural number set
+The difference between the square root of 285 and 283 is 0.0625
+285 and 283 are both consecutively occuring primes in the natural number set
+The difference between the square root of 283 and 281 is 0.0625
+283 and 281 are both consecutively occuring primes in the natural number set
+The difference between the square root of 281 and 279 is 0.0625
+281 and 279 are both consecutively occuring primes in the natural number set
+The difference between the square root of 279 and 277 is 0.0625
+279 and 277 are both consecutively occuring primes in the natural number set
+The difference between the square root of 277 and 275 is 0.0625
+277 and 275 are both consecutively occuring primes in the natural number set
+The difference between the square root of 275 and 273 is 0.0625
+275 and 273 are both consecutively occuring primes in the natural number set
+The difference between the square root of 273 and 271 is 0.0625
+273 and 271 are both consecutively occuring primes in the natural number set
+The difference between the square root of 271 and 269 is 0.0625
+271 and 269 are both consecutively occuring primes in the natural number set
+The difference between the square root of 269 and 267 is 0.0625
+269 and 267 are both consecutively occuring primes in the natural number set
+The difference between the square root of 267 and 265 is 0.0625
+267 and 265 are both consecutively occuring primes in the natural number set
+The difference between the square root of 265 and 263 is 0.0625
+265 and 263 are both consecutively occuring primes in the natural number set
+The difference between the square root of 263 and 261 is 0.0625
+263 and 261 are both consecutively occuring primes in the natural number set
+The difference between the square root of 261 and 259 is 0.0625
+261 and 259 are both consecutively occuring primes in the natural number set
+The difference between the square root of 259 and 257 is 0.0625
+259 and 257 are both consecutively occuring primes in the natural number set
+The difference between the square root of 257 and 255 is -7.90625
+257 and 255 are both consecutively occuring primes in the natural number set
+The difference between the square root of 255 and 253 is 0.125
+255 and 253 are both consecutively occuring primes in the natural number set
+The difference between the square root of 253 and 251 is 0.125
+253 and 251 are both consecutively occuring primes in the natural number set
+The difference between the square root of 251 and 249 is 0.125
+251 and 249 are both consecutively occuring primes in the natural number set
+The difference between the square root of 249 and 247 is 0.125
+249 and 247 are both consecutively occuring primes in the natural number set
+The difference between the square root of 247 and 245 is 0.125
+247 and 245 are both consecutively occuring primes in the natural number set
+The difference between the square root of 245 and 243 is 0.125
+245 and 243 are both consecutively occuring primes in the natural number set
+The difference between the square root of 243 and 241 is 0.125
+243 and 241 are both consecutively occuring primes in the natural number set
+The difference between the square root of 241 and 239 is 0.125
+241 and 239 are both consecutively occuring primes in the natural number set
+The difference between the square root of 239 and 237 is 0.125
+239 and 237 are both consecutively occuring primes in the natural number set
+The difference between the square root of 237 and 235 is 0.125
+237 and 235 are both consecutively occuring primes in the natural number set
+The difference between the square root of 235 and 233 is 0.125
+235 and 233 are both consecutively occuring primes in the natural number set
+The difference between the square root of 233 and 231 is 0.125
+233 and 231 are both consecutively occuring primes in the natural number set
+The difference between the square root of 231 and 229 is 0.125
+231 and 229 are both consecutively occuring primes in the natural number set
+The difference between the square root of 229 and 227 is 0.125
+229 and 227 are both consecutively occuring primes in the natural number set
+The difference between the square root of 227 and 225 is 0.125
+227 and 225 are both consecutively occuring primes in the natural number set
+The difference between the square root of 225 and 223 is 0.125
+225 and 223 are both consecutively occuring primes in the natural number set
+The difference between the square root of 223 and 221 is 0.125
+223 and 221 are both consecutively occuring primes in the natural number set
+The difference between the square root of 221 and 219 is 0.125
+221 and 219 are both consecutively occuring primes in the natural number set
+The difference between the square root of 219 and 217 is 0.125
+219 and 217 are both consecutively occuring primes in the natural number set
+The difference between the square root of 217 and 215 is 0.125
+217 and 215 are both consecutively occuring primes in the natural number set
+The difference between the square root of 215 and 213 is 0.125
+215 and 213 are both consecutively occuring primes in the natural number set
+The difference between the square root of 213 and 211 is 0.125
+213 and 211 are both consecutively occuring primes in the natural number set
+The difference between the square root of 211 and 209 is 0.125
+211 and 209 are both consecutively occuring primes in the natural number set
+The difference between the square root of 209 and 207 is 0.125
+209 and 207 are both consecutively occuring primes in the natural number set
+The difference between the square root of 207 and 205 is 0.125
+207 and 205 are both consecutively occuring primes in the natural number set
+The difference between the square root of 205 and 203 is 0.125
+205 and 203 are both consecutively occuring primes in the natural number set
+The difference between the square root of 203 and 201 is 0.125
+203 and 201 are both consecutively occuring primes in the natural number set
+The difference between the square root of 201 and 199 is 0.125
+201 and 199 are both consecutively occuring primes in the natural number set
+The difference between the square root of 199 and 197 is 0.125
+199 and 197 are both consecutively occuring primes in the natural number set
+The difference between the square root of 197 and 195 is 0.125
+197 and 195 are both consecutively occuring primes in the natural number set
+The difference between the square root of 195 and 193 is 0.125
+195 and 193 are both consecutively occuring primes in the natural number set
+The difference between the square root of 193 and 191 is 0.125
+193 and 191 are both consecutively occuring primes in the natural number set
+The difference between the square root of 191 and 189 is 0.125
+191 and 189 are both consecutively occuring primes in the natural number set
+The difference between the square root of 189 and 187 is 0.125
+189 and 187 are both consecutively occuring primes in the natural number set
+The difference between the square root of 187 and 185 is 0.125
+187 and 185 are both consecutively occuring primes in the natural number set
+The difference between the square root of 185 and 183 is 0.125
+185 and 183 are both consecutively occuring primes in the natural number set
+The difference between the square root of 183 and 181 is 0.125
+183 and 181 are both consecutively occuring primes in the natural number set
+The difference between the square root of 181 and 179 is 0.125
+181 and 179 are both consecutively occuring primes in the natural number set
+The difference between the square root of 179 and 177 is 0.125
+179 and 177 are both consecutively occuring primes in the natural number set
+The difference between the square root of 177 and 175 is 0.125
+177 and 175 are both consecutively occuring primes in the natural number set
+The difference between the square root of 175 and 173 is 0.125
+175 and 173 are both consecutively occuring primes in the natural number set
+The difference between the square root of 173 and 171 is 0.125
+173 and 171 are both consecutively occuring primes in the natural number set
+The difference between the square root of 171 and 169 is 0.125
+171 and 169 are both consecutively occuring primes in the natural number set
+The difference between the square root of 169 and 167 is 0.125
+169 and 167 are both consecutively occuring primes in the natural number set
+The difference between the square root of 167 and 165 is 0.125
+167 and 165 are both consecutively occuring primes in the natural number set
+The difference between the square root of 165 and 163 is 0.125
+165 and 163 are both consecutively occuring primes in the natural number set
+The difference between the square root of 163 and 161 is 0.125
+163 and 161 are both consecutively occuring primes in the natural number set
+The difference between the square root of 161 and 159 is 0.125
+161 and 159 are both consecutively occuring primes in the natural number set
+The difference between the square root of 159 and 157 is 0.125
+159 and 157 are both consecutively occuring primes in the natural number set
+The difference between the square root of 157 and 155 is 0.125
+157 and 155 are both consecutively occuring primes in the natural number set
+The difference between the square root of 155 and 153 is 0.125
+155 and 153 are both consecutively occuring primes in the natural number set
+The difference between the square root of 153 and 151 is 0.125
+153 and 151 are both consecutively occuring primes in the natural number set
+The difference between the square root of 151 and 149 is 0.125
+151 and 149 are both consecutively occuring primes in the natural number set
+The difference between the square root of 149 and 147 is 0.125
+149 and 147 are both consecutively occuring primes in the natural number set
+The difference between the square root of 147 and 145 is 0.125
+147 and 145 are both consecutively occuring primes in the natural number set
+The difference between the square root of 145 and 143 is 0.125
+145 and 143 are both consecutively occuring primes in the natural number set
+The difference between the square root of 143 and 141 is 0.125
+143 and 141 are both consecutively occuring primes in the natural number set
+The difference between the square root of 141 and 139 is 0.125
+141 and 139 are both consecutively occuring primes in the natural number set
+The difference between the square root of 139 and 137 is 0.125
+139 and 137 are both consecutively occuring primes in the natural number set
+The difference between the square root of 137 and 135 is 0.125
+137 and 135 are both consecutively occuring primes in the natural number set
+The difference between the square root of 135 and 133 is 0.125
+135 and 133 are both consecutively occuring primes in the natural number set
+The difference between the square root of 133 and 131 is 0.125
+133 and 131 are both consecutively occuring primes in the natural number set
+The difference between the square root of 131 and 129 is 0.125
+131 and 129 are both consecutively occuring primes in the natural number set
+The difference between the square root of 129 and 127 is 0.125
+129 and 127 are both consecutively occuring primes in the natural number set
+The difference between the square root of 127 and 125 is 0.125
+127 and 125 are both consecutively occuring primes in the natural number set
+The difference between the square root of 125 and 123 is 0.125
+125 and 123 are both consecutively occuring primes in the natural number set
+The difference between the square root of 123 and 121 is 0.125
+123 and 121 are both consecutively occuring primes in the natural number set
+The difference between the square root of 121 and 119 is 0.125
+121 and 119 are both consecutively occuring primes in the natural number set
+The difference between the square root of 119 and 117 is 0.125
+119 and 117 are both consecutively occuring primes in the natural number set
+The difference between the square root of 117 and 115 is 0.125
+117 and 115 are both consecutively occuring primes in the natural number set
+The difference between the square root of 115 and 113 is 0.125
+115 and 113 are both consecutively occuring primes in the natural number set
+The difference between the square root of 113 and 111 is 0.125
+113 and 111 are both consecutively occuring primes in the natural number set
+The difference between the square root of 111 and 109 is 0.125
+111 and 109 are both consecutively occuring primes in the natural number set
+The difference between the square root of 109 and 107 is 0.125
+109 and 107 are both consecutively occuring primes in the natural number set
+The difference between the square root of 107 and 105 is 0.125
+107 and 105 are both consecutively occuring primes in the natural number set
+The difference between the square root of 105 and 103 is 0.125
+105 and 103 are both consecutively occuring primes in the natural number set
+The difference between the square root of 103 and 101 is 0.125
+103 and 101 are both consecutively occuring primes in the natural number set
+The difference between the square root of 101 and 99 is 0.125
+101 and 99 are both consecutively occuring primes in the natural number set
+The difference between the square root of 99 and 97 is 0.125
+99 and 97 are both consecutively occuring primes in the natural number set
+The difference between the square root of 97 and 95 is 0.125
+97 and 95 are both consecutively occuring primes in the natural number set
+The difference between the square root of 95 and 93 is 0.125
+95 and 93 are both consecutively occuring primes in the natural number set
+The difference between the square root of 93 and 91 is 0.125
+93 and 91 are both consecutively occuring primes in the natural number set
+The difference between the square root of 91 and 89 is 0.125
+91 and 89 are both consecutively occuring primes in the natural number set
+The difference between the square root of 89 and 87 is 0.125
+89 and 87 are both consecutively occuring primes in the natural number set
+The difference between the square root of 87 and 85 is 0.125
+87 and 85 are both consecutively occuring primes in the natural number set
+The difference between the square root of 85 and 83 is 0.125
+85 and 83 are both consecutively occuring primes in the natural number set
+The difference between the square root of 83 and 81 is 0.125
+83 and 81 are both consecutively occuring primes in the natural number set
+The difference between the square root of 81 and 79 is 0.125
+81 and 79 are both consecutively occuring primes in the natural number set
+The difference between the square root of 79 and 77 is 0.125
+79 and 77 are both consecutively occuring primes in the natural number set
+The difference between the square root of 77 and 75 is 0.125
+77 and 75 are both consecutively occuring primes in the natural number set
+The difference between the square root of 75 and 73 is 0.125
+75 and 73 are both consecutively occuring primes in the natural number set
+The difference between the square root of 73 and 71 is 0.125
+73 and 71 are both consecutively occuring primes in the natural number set
+The difference between the square root of 71 and 69 is 0.125
+71 and 69 are both consecutively occuring primes in the natural number set
+The difference between the square root of 69 and 67 is 0.125
+69 and 67 are both consecutively occuring primes in the natural number set
+The difference between the square root of 67 and 65 is 0.125
+67 and 65 are both consecutively occuring primes in the natural number set
+The difference between the square root of 65 and 63 is -3.8125
+65 and 63 are both consecutively occuring primes in the natural number set
+The difference between the square root of 63 and 61 is 0.25
+63 and 61 are both consecutively occuring primes in the natural number set
+The difference between the square root of 61 and 59 is 0.25
+61 and 59 are both consecutively occuring primes in the natural number set
+The difference between the square root of 59 and 57 is 0.25
+59 and 57 are both consecutively occuring primes in the natural number set
+The difference between the square root of 57 and 55 is 0.25
+57 and 55 are both consecutively occuring primes in the natural number set
+The difference between the square root of 55 and 53 is 0.25
+55 and 53 are both consecutively occuring primes in the natural number set
+The difference between the square root of 53 and 51 is 0.25
+53 and 51 are both consecutively occuring primes in the natural number set
+The difference between the square root of 51 and 49 is 0.25
+51 and 49 are both consecutively occuring primes in the natural number set
+The difference between the square root of 49 and 47 is 0.25
+49 and 47 are both consecutively occuring primes in the natural number set
+The difference between the square root of 47 and 45 is 0.25
+47 and 45 are both consecutively occuring primes in the natural number set
+The difference between the square root of 45 and 43 is 0.25
+45 and 43 are both consecutively occuring primes in the natural number set
+The difference between the square root of 43 and 41 is 0.25
+43 and 41 are both consecutively occuring primes in the natural number set
+The difference between the square root of 41 and 39 is 0.25
+41 and 39 are both consecutively occuring primes in the natural number set
+The difference between the square root of 39 and 37 is 0.25
+39 and 37 are both consecutively occuring primes in the natural number set
+The difference between the square root of 37 and 35 is 0.25
+37 and 35 are both consecutively occuring primes in the natural number set
+The difference between the square root of 35 and 33 is 0.25
+35 and 33 are both consecutively occuring primes in the natural number set
+The difference between the square root of 33 and 31 is 0.25
+33 and 31 are both consecutively occuring primes in the natural number set
+The difference between the square root of 31 and 29 is 0.25
+31 and 29 are both consecutively occuring primes in the natural number set
+The difference between the square root of 29 and 27 is 0.25
+29 and 27 are both consecutively occuring primes in the natural number set
+The difference between the square root of 27 and 25 is 0.25
+27 and 25 are both consecutively occuring primes in the natural number set
+The difference between the square root of 25 and 23 is 0.25
+25 and 23 are both consecutively occuring primes in the natural number set
+The difference between the square root of 23 and 21 is 0.25
+23 and 21 are both consecutively occuring primes in the natural number set
+The difference between the square root of 21 and 19 is 0.25
+21 and 19 are both consecutively occuring primes in the natural number set
+The difference between the square root of 19 and 17 is 0.25
+19 and 17 are both consecutively occuring primes in the natural number set
+The difference between the square root of 17 and 15 is -1.625
+17 and 15 are both consecutively occuring primes in the natural number set
+The difference between the square root of 15 and 13 is 0.5
+15 and 13 are both consecutively occuring primes in the natural number set
+The difference between the square root of 13 and 11 is 0.5
+13 and 11 are both consecutively occuring primes in the natural number set
+The difference between the square root of 11 and 9 is 0.5
+11 and 9 are both consecutively occuring primes in the natural number set
+The difference between the square root of 9 and 7 is 0.5
+9 and 7 are both consecutively occuring primes in the natural number set
+The difference between the square root of 7 and 5 is 0.5
+7 and 5 are both consecutively occuring primes in the natural number set
+The difference between the square root of 5 and 3 is -0.25
+5 and 3 are both consecutively occuring primes in the natural number set
+The mean of the differences of the consecutively occuring primes square roots are: 0.05967620481927711; the median: 0.0625 the mode(s): [-7.90625 -3.8125  -1.625   -0.25     0.0625   0.125    0.25     0.5    ]
 """
