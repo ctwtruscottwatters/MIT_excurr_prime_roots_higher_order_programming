@@ -46,7 +46,9 @@ def main():
 if __name__ == "__main__": main()
 
 """ 
-Square roots of the first ~1000 prime numbers 
+Square roots of the primes occuring in the first ~1000 natural (counting) numbers 
+
+Eager to find an numerical algorithm to generate or approximate up to so many primes in the natural and real and complex number systems such as Ramanujan\'s notebooks have formulas for approximating pi, sine, cosine, tangent and inverse sine, cosine, tangent and their hyperbolic counterparts
 
 Charles Thomas Wallace Truscott, Byron Bay NSW 2481
 
