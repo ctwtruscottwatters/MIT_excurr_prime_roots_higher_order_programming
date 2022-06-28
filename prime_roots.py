@@ -52,53 +52,46 @@ def main():
         print("The square root of the prime number {} is {}".format(q[0], q[1]))
     for r in x:
         print("{} x {} is the prime number {}".format(r[1], r[1], round(r[1] * r[1], 5)))
-#    diff = []
-#    index = 0
-#    for n in range(0, len(x), 1):
-#        if n + 1 >= len(x):
-#            break
-#        else:
-#            print("The difference between the square root of {} and {} is {}".format(x[n][0], x[n + 1][0], x[n][1] - x[n + 1][1]))
-#            print("{} and {} are both consecutively occuring primes in the natural number set".format(x[n][0], x[n + 1][0]))
-#            diff.append(x[n][1] - x[n + 1][1])
-#    print("The mean of the differences of the consecutively occuring primes square roots are: {}; the median: {} the mode(s): {}".format(numpy.mean(diff), numpy.median(diff), numpy.unique(diff)))
-#    
-#    primeSum = 0
-#    primeRootSum = 0
-#    for s in x:
-#        primeSum += s[0]
-#        primeRootSum += s[1]
-#    print("The sum of the primes that occur in the first 1000 natural numbers is {}".format(primeSum))
-#    print("The sum of their square roots is: {}".format(primeRootSum))
-#    rootSumisPrime = False
-#    primeSumisPrime = False
-#    for n in range(2, primeSum, 1):
-#        if primeSum % n == 0:
-#            break
-#        else:
-#            primeSumisPrime = True
-#    for n in range(2, int(primeRootSum), 1):
-#        if int(primeRootSum) % n == 0:
-#            break
-#        else:
-#            rootSumisPrime = True
-#            
-#    if rootSumisPrime == True:
-#        print("{} (The sum of the square roots of the primes that occur in the first 1000 natural numbers) is also prime".format(int(primeRootSum)))
-#    if primeSumisPrime == True:
-#        print("{} (The sum of the primes that occur in the first 1000 natural numbers) is also prime".format(primeSum))
-#    print("Postulate: for all prime numbers in the natural number set the summation of the primes ascending to prime n is also prime")
-#    print("{} {}".format(x[1][0], x[2][0]))
-#    for z in range(0, len(x), 1):
-#        if z + 1 >= len(x):
-#            break
-#        else:
-#            sumofeachtwoprimes = int(x[z][0] + x[z + 1][0])
-#        for pqrs in range(2, sumofeachtwoprimes):
-#            if sumofeachtwoprimes % pqrs == 0:
-#                continue
-#        print("The sum of the two primes {} and {} (which is {}) is also prime".format(x[z][0], x[z + 1][0], x[z][0] + x[z + 1][0]))
+    diff = []
+    index = 0
+    for n in range(0, len(x), 1):
+        if n + 1 >= len(x):
+            break
+        else:
+            print("The difference between the square root of {} and {} is {}".format(x[n][0], x[n + 1][0], x[n + 1][1] - x[n][1]))
+            print("{} and {} are both consecutively occuring primes in the natural number set".format(x[n][0], x[n + 1][0]))
+            diff.append(x[n + 1][1] - x[n][1])
+    print("The mean of the differences of the consecutively occuring primes square roots are: {}; the median: {} the mode(s): {}".format(numpy.mean(diff), numpy.median(diff), numpy.unique(diff)))
+    
+    primeSum = 0
+    primeRootSum = 0
+    for s in x:
+        primeSum += s[0]
+        primeRootSum += s[1]
+    print("The sum of the primes that occur in the first 1000 natural numbers is {}".format(primeSum))
+    print("The sum of their square roots is: {}".format(primeRootSum))
+
+           
+    print("Postulate: for all prime numbers in the natural number set the summation of the primes ascending to prime n is also prime")
+    print("{} {}".format(x[1][0], x[2][0]))
+    for z in range(0, len(x), 1):
+        if z + 1 >= len(x):
+            break
+        else:
+            sumofeachtwoprimes = int(x[z][0] + x[z + 1][0])
+        for pqrs in range(2, sumofeachtwoprimes):
+            if sumofeachtwoprimes % pqrs == 0:
+                continue
+        print("The sum of the two primes {} and {} is {}".format(x[z][0], x[z + 1][0], x[z][0] + x[z + 1][0]))
 if __name__ == "__main__": main()
+
+
+"""
+The sum of the primes that occur in the first 1000 natural numbers is 76125 (can already see this is not a prime number, is divisible by 5)
+The sum of their square roots is: 3306.354886138928
+
+
+"""
 
 """
 
@@ -439,3 +432,368 @@ The square root of the prime number 997 is 31.57530679902993
 
 """
 
+
+"""
+runfile('C:/Users/17/Downloads/prime_roots.py', wdir='C:/Users/17/Downloads')
+The difference between the square root of 3 and 5 is 0.5040163993835449
+3 and 5 are both consecutively occuring primes in the natural number set
+The difference between the square root of 5 and 7 is 0.4096832275390625
+5 and 7 are both consecutively occuring primes in the natural number set
+The difference between the square root of 7 and 11 is 0.670872688293457
+7 and 11 are both consecutively occuring primes in the natural number set
+The difference between the square root of 11 and 13 is 0.28892672061920166
+11 and 13 are both consecutively occuring primes in the natural number set
+The difference between the square root of 13 and 17 is 0.5175541639328003
+13 and 17 are both consecutively occuring primes in the natural number set
+The difference between the square root of 17 and 19 is 0.23579353094100952
+17 and 19 are both consecutively occuring primes in the natural number set
+The difference between the square root of 19 and 23 is 0.43693244457244873
+19 and 23 are both consecutively occuring primes in the natural number set
+The difference between the square root of 23 and 29 is 0.5893341302871704
+23 and 29 are both consecutively occuring primes in the natural number set
+The difference between the square root of 29 and 31 is 0.18259930610656738
+29 and 31 are both consecutively occuring primes in the natural number set
+The difference between the square root of 31 and 37 is 0.5149984657764435
+31 and 37 are both consecutively occuring primes in the natural number set
+The difference between the square root of 37 and 41 is 0.320361465215683
+37 and 41 are both consecutively occuring primes in the natural number set
+The difference between the square root of 41 and 43 is 0.15431424975395203
+41 and 43 are both consecutively occuring primes in the natural number set
+The difference between the square root of 43 and 47 is 0.2982160449028015
+43 and 47 are both consecutively occuring primes in the natural number set
+The difference between the square root of 47 and 53 is 0.4244548827409744
+47 and 53 are both consecutively occuring primes in the natural number set
+The difference between the square root of 53 and 59 is 0.40103624761104584
+53 and 59 are both consecutively occuring primes in the natural number set
+The difference between the square root of 59 and 61 is 0.12910380214452744
+59 and 61 are both consecutively occuring primes in the natural number set
+The difference between the square root of 61 and 67 is 0.37510302662849426
+61 and 67 are both consecutively occuring primes in the natural number set
+The difference between the square root of 67 and 71 is 0.2407972440123558
+67 and 71 are both consecutively occuring primes in the natural number set
+The difference between the square root of 71 and 73 is 0.11785393208265305
+71 and 73 are both consecutively occuring primes in the natural number set
+The difference between the square root of 73 and 79 is 0.34419048577547073
+73 and 79 are both consecutively occuring primes in the natural number set
+The difference between the square root of 79 and 83 is 0.22223952412605286
+79 and 83 are both consecutively occuring primes in the natural number set
+The difference between the square root of 83 and 89 is 0.32354748994112015
+83 and 89 are both consecutively occuring primes in the natural number set
+The difference between the square root of 89 and 97 is 0.41487644985318184
+89 and 97 are both consecutively occuring primes in the natural number set
+The difference between the square root of 97 and 101 is 0.20101777836680412
+97 and 101 are both consecutively occuring primes in the natural number set
+The difference between the square root of 101 and 103 is 0.09901624172925949
+101 and 103 are both consecutively occuring primes in the natural number set
+The difference between the square root of 103 and 107 is 0.19518863037228584
+103 and 107 are both consecutively occuring primes in the natural number set
+The difference between the square root of 107 and 109 is 0.09622626379132271
+107 and 109 are both consecutively occuring primes in the natural number set
+The difference between the square root of 109 and 113 is 0.18983932584524155
+109 and 113 are both consecutively occuring primes in the natural number set
+The difference between the square root of 113 and 127 is 0.6392816938459873
+113 and 127 are both consecutively occuring primes in the natural number set
+The difference between the square root of 127 and 131 is 0.17609558999538422
+127 and 131 are both consecutively occuring primes in the natural number set
+The difference between the square root of 131 and 137 is 0.25917674601078033
+131 and 137 are both consecutively occuring primes in the natural number set
+The difference between the square root of 137 and 139 is 0.08512597158551216
+137 and 139 are both consecutively occuring primes in the natural number set
+The difference between the square root of 139 and 149 is 0.41672964952886105
+139 and 149 are both consecutively occuring primes in the natural number set
+The difference between the square root of 149 and 151 is 0.0816500075161457
+149 and 151 are both consecutively occuring primes in the natural number set
+The difference between the square root of 151 and 157 is 0.24175860546529293
+151 and 157 are both consecutively occuring primes in the natural number set
+The difference between the square root of 157 and 163 is 0.23718099482357502
+157 and 163 are both consecutively occuring primes in the natural number set
+The difference between the square root of 163 and 167 is 0.15570257045328617
+163 and 167 are both consecutively occuring primes in the natural number set
+The difference between the square root of 167 and 173 is 0.23009872809052467
+167 and 173 are both consecutively occuring primes in the natural number set
+The difference between the square root of 173 and 179 is 0.22614159435033798
+173 and 179 are both consecutively occuring primes in the natural number set
+The difference between the square root of 179 and 181 is 0.07453601248562336
+179 and 181 are both consecutively occuring primes in the natural number set
+The difference between the square root of 181 and 191 is 0.3666508477181196
+181 and 191 are both consecutively occuring primes in the natural number set
+The difference between the square root of 191 and 193 is 0.07216901704668999
+191 and 193 are both consecutively occuring primes in the natural number set
+The difference between the square root of 193 and 197 is 0.1432249154895544
+193 and 197 are both consecutively occuring primes in the natural number set
+The difference between the square root of 197 and 199 is 0.07106705941259861
+197 and 199 are both consecutively occuring primes in the natural number set
+The difference between the square root of 199 and 211 is 0.41910310834646225
+199 and 211 are both consecutively occuring primes in the natural number set
+The difference between the square root of 211 and 223 is 0.40734523348510265
+211 and 223 are both consecutively occuring primes in the natural number set
+The difference between the square root of 223 and 227 is 0.1333348322659731
+223 and 227 are both consecutively occuring primes in the natural number set
+The difference between the square root of 227 and 229 is 0.06622677389532328
+227 and 229 are both consecutively occuring primes in the natural number set
+The difference between the square root of 229 and 233 is 0.13159161899238825
+229 and 233 are both consecutively occuring primes in the natural number set
+The difference between the square root of 233 and 239 is 0.19528729561716318
+233 and 239 are both consecutively occuring primes in the natural number set
+The difference between the square root of 239 and 241 is 0.06454979628324509
+239 and 241 are both consecutively occuring primes in the natural number set
+The difference between the square root of 241 and 251 is 0.3188048508018255
+241 and 251 are both consecutively occuring primes in the natural number set
+The difference between the square root of 251 and 257 is 0.1882400754839182
+251 and 257 are both consecutively occuring primes in the natural number set
+The difference between the square root of 257 and 263 is 0.18605507537722588
+257 and 263 are both consecutively occuring primes in the natural number set
+The difference between the square root of 263 and 269 is 0.18394467886537313
+263 and 269 are both consecutively occuring primes in the natural number set
+The difference between the square root of 269 and 271 is 0.060858349315822124
+269 and 271 are both consecutively occuring primes in the natural number set
+The difference between the square root of 271 and 277 is 0.18123937491327524
+271 and 277 are both consecutively occuring primes in the natural number set
+The difference between the square root of 277 and 281 is 0.11973752547055483
+277 and 281 are both consecutively occuring primes in the natural number set
+The difference between the square root of 281 and 283 is 0.059549166820943356
+281 and 283 are both consecutively occuring primes in the natural number set
+The difference between the square root of 283 and 293 is 0.2946389587596059
+283 and 293 are both consecutively occuring primes in the natural number set
+The difference between the square root of 293 and 307 is 0.4041728097945452
+293 and 307 are both consecutively occuring primes in the natural number set
+The difference between the square root of 307 and 311 is 0.11377657018601894
+307 and 311 are both consecutively occuring primes in the natural number set
+The difference between the square root of 311 and 313 is 0.056613837368786335
+311 and 313 are both consecutively occuring primes in the natural number set
+The difference between the square root of 313 and 317 is 0.11268783826380968
+313 and 317 are both consecutively occuring primes in the natural number set
+The difference between the square root of 317 and 331 is 0.38891154807060957
+317 and 331 are both consecutively occuring primes in the natural number set
+The difference between the square root of 331 and 337 is 0.16415435820817947
+331 and 337 are both consecutively occuring primes in the natural number set
+The difference between the square root of 337 and 347 is 0.27037624176591635
+337 and 347 are both consecutively occuring primes in the natural number set
+The difference between the square root of 347 and 349 is 0.053605726920068264
+347 and 349 are both consecutively occuring primes in the natural number set
+The difference between the square root of 349 and 353 is 0.10675263125449419
+349 and 353 are both consecutively occuring primes in the natural number set
+The difference between the square root of 353 and 359 is 0.1590010253712535
+353 and 359 are both consecutively occuring primes in the natural number set
+The difference between the square root of 359 and 367 is 0.20994875114411116
+359 and 367 are both consecutively occuring primes in the natural number set
+The difference between the square root of 367 and 373 is 0.1559637701138854
+367 and 373 are both consecutively occuring primes in the natural number set
+The difference between the square root of 373 and 379 is 0.15471457969397306
+373 and 379 are both consecutively occuring primes in the natural number set
+The difference between the square root of 379 and 383 is 0.10246329475194216
+379 and 383 are both consecutively occuring primes in the natural number set
+The difference between the square root of 383 and 389 is 0.15269719203934073
+383 and 389 are both consecutively occuring primes in the natural number set
+The difference between the square root of 389 and 397 is 0.20177598483860493
+389 and 397 are both consecutively occuring primes in the natural number set
+The difference between the square root of 397 and 401 is 0.10012554051354527
+397 and 401 are both consecutively occuring primes in the natural number set
+The difference between the square root of 401 and 409 is 0.1987639218568802
+401 and 409 are both consecutively occuring primes in the natural number set
+The difference between the square root of 409 and 419 is 0.24574124719947577
+409 and 419 are both consecutively occuring primes in the natural number set
+The difference between the square root of 419 and 421 is 0.048794937785714865
+419 and 421 are both consecutively occuring primes in the natural number set
+The difference between the square root of 421 and 431 is 0.24225505022332072
+421 and 431 are both consecutively occuring primes in the natural number set
+The difference between the square root of 431 and 433 is 0.04811244364827871
+431 and 433 are both consecutively occuring primes in the natural number set
+The difference between the square root of 433 and 439 is 0.14367471635341644
+433 and 439 are both consecutively occuring primes in the natural number set
+The difference between the square root of 439 and 443 is 0.09523838898167014
+439 and 443 are both consecutively occuring primes in the natural number set
+The difference between the square root of 443 and 449 is 0.1420548977330327
+443 and 449 are both consecutively occuring primes in the natural number set
+The difference between the square root of 449 and 457 is 0.18793829018250108
+449 and 457 are both consecutively occuring primes in the natural number set
+The difference between the square root of 457 and 461 is 0.0933522586710751
+457 and 461 are both consecutively occuring primes in the natural number set
+The difference between the square root of 461 and 463 is 0.046524238772690296
+461 and 463 are both consecutively occuring primes in the natural number set
+The difference between the square root of 463 and 467 is 0.0927479644306004
+463 and 467 are both consecutively occuring primes in the natural number set
+The difference between the square root of 467 and 479 is 0.2758857626467943
+467 and 479 are both consecutively occuring primes in the natural number set
+The difference between the square root of 479 and 487 is 0.182007962372154
+479 and 487 are both consecutively occuring primes in the natural number set
+The difference between the square root of 487 and 491 is 0.09044321672990918
+487 and 491 are both consecutively occuring primes in the natural number set
+The difference between the square root of 491 and 499 is 0.17978816712275147
+491 and 499 are both consecutively occuring primes in the natural number set
+The difference between the square root of 499 and 503 is 0.08935353718698025
+499 and 503 are both consecutively occuring primes in the natural number set
+The difference between the square root of 503 and 509 is 0.133366865105927
+503 and 509 are both consecutively occuring primes in the natural number set
+The difference between the square root of 509 and 521 is 0.26439617201685905
+509 and 521 are both consecutively occuring primes in the natural number set
+The difference between the square root of 521 and 523 is 0.043768772622570395
+521 and 523 are both consecutively occuring primes in the natural number set
+The difference between the square root of 523 and 541 is 0.3902133658993989
+523 and 541 are both consecutively occuring primes in the natural number set
+The difference between the square root of 541 and 547 is 0.1286244192160666
+541 and 547 are both consecutively occuring primes in the natural number set
+The difference between the square root of 547 and 557 is 0.21281642955727875
+547 and 557 are both consecutively occuring primes in the natural number set
+The difference between the square root of 557 and 563 is 0.1267735578585416
+557 and 563 are both consecutively occuring primes in the natural number set
+The difference between the square root of 563 and 569 is 0.12609992502257228
+563 and 569 are both consecutively occuring primes in the natural number set
+The difference between the square root of 569 and 571 is 0.04188544675707817
+569 and 571 are both consecutively occuring primes in the natural number set
+The difference between the square root of 571 and 577 is 0.12521790526807308
+571 and 577 are both consecutively occuring primes in the natural number set
+The difference between the square root of 577 and 587 is 0.20725859981030226
+577 and 587 are both consecutively occuring primes in the natural number set
+The difference between the square root of 587 and 593 is 0.1235084980726242
+587 and 593 are both consecutively occuring primes in the natural number set
+The difference between the square root of 593 and 599 is 0.12288507306948304
+593 and 599 are both consecutively occuring primes in the natural number set
+The difference between the square root of 599 and 601 is 0.04082484543323517
+599 and 601 are both consecutively occuring primes in the natural number set
+The difference between the square root of 601 and 607 is 0.12206869316287339
+601 and 607 are both consecutively occuring primes in the natural number set
+The difference between the square root of 607 and 613 is 0.12146677356213331
+607 and 613 are both consecutively occuring primes in the natural number set
+The difference between the square root of 613 and 617 is 0.08064782922156155
+613 and 617 are both consecutively occuring primes in the natural number set
+The difference between the square root of 617 and 619 is 0.040226030396297574
+617 and 619 are both consecutively occuring primes in the natural number set
+The difference between the square root of 619 and 631 is 0.24000268406234682
+619 and 631 are both consecutively occuring primes in the natural number set
+The difference between the square root of 631 and 641 is 0.19826450874097645
+631 and 641 are both consecutively occuring primes in the natural number set
+The difference between the square root of 641 and 643 is 0.03946684277616441
+641 and 643 are both consecutively occuring primes in the natural number set
+The difference between the square root of 643 and 647 is 0.07875004503875971
+643 and 647 are both consecutively occuring primes in the natural number set
+The difference between the square root of 647 and 653 is 0.11766991531476378
+647 and 653 are both consecutively occuring primes in the natural number set
+The difference between the square root of 653 and 659 is 0.1171306879259646
+653 and 659 are both consecutively occuring primes in the natural number set
+The difference between the square root of 659 and 661 is 0.03892487799748778
+659 and 661 are both consecutively occuring primes in the natural number set
+The difference between the square root of 661 and 673 is 0.23232325445860624
+661 and 673 are both consecutively occuring primes in the natural number set
+The difference between the square root of 673 and 677 is 0.07698013167828321
+673 and 677 are both consecutively occuring primes in the natural number set
+The difference between the square root of 677 and 683 is 0.1150450655259192
+677 and 683 are both consecutively occuring primes in the natural number set
+The difference between the square root of 683 and 691 is 0.15261018369346857
+683 and 691 are both consecutively occuring primes in the natural number set
+The difference between the square root of 691 and 701 is 0.18952576909214258
+691 and 701 are both consecutively occuring primes in the natural number set
+The difference between the square root of 701 and 709 is 0.1506492174230516
+701 and 709 are both consecutively occuring primes in the natural number set
+The difference between the square root of 709 and 719 is 0.18712152959778905
+709 and 719 are both consecutively occuring primes in the natural number set
+The difference between the square root of 719 and 727 is 0.148762215860188
+719 and 727 are both consecutively occuring primes in the natural number set
+The difference between the square root of 727 and 733 is 0.11103522987104952
+727 and 733 are both consecutively occuring primes in the natural number set
+The difference between the square root of 733 and 739 is 0.11058165528811514
+733 and 739 are both consecutively occuring primes in the natural number set
+The difference between the square root of 739 and 743 is 0.07347185397520661
+739 and 743 are both consecutively occuring primes in the natural number set
+The difference between the square root of 743 and 751 is 0.14635299076326191
+743 and 751 are both consecutively occuring primes in the natural number set
+The difference between the square root of 751 and 757 is 0.1092537681106478
+751 and 757 are both consecutively occuring primes in the natural number set
+The difference between the square root of 757 and 761 is 0.07259541400708258
+757 and 761 are both consecutively occuring primes in the natural number set
+The difference between the square root of 761 and 769 is 0.1446207833942026
+761 and 769 are both consecutively occuring primes in the natural number set
+The difference between the square root of 769 and 773 is 0.07202820153906941
+769 and 773 are both consecutively occuring primes in the natural number set
+The difference between the square root of 773 and 787 is 0.2506428682245314
+773 and 787 are both consecutively occuring primes in the natural number set
+The difference between the square root of 787 and 797 is 0.17766808369196951
+787 and 797 are both consecutively occuring primes in the natural number set
+The difference between the square root of 797 and 809 is 0.21173696080222726
+797 and 809 are both consecutively occuring primes in the natural number set
+The difference between the square root of 809 and 811 is 0.0351363371592015
+809 and 811 are both consecutively occuring primes in the natural number set
+The difference between the square root of 811 and 821 is 0.1750358222052455
+811 and 821 are both consecutively occuring primes in the natural number set
+The difference between the square root of 821 and 823 is 0.03487905103247613
+821 and 823 are both consecutively occuring primes in the natural number set
+The difference between the square root of 823 and 827 is 0.06963103695306927
+823 and 827 are both consecutively occuring primes in the natural number set
+The difference between the square root of 827 and 829 is 0.034752483014017344
+827 and 829 are both consecutively occuring primes in the natural number set
+The difference between the square root of 829 and 839 is 0.1731366296298802
+829 and 839 are both consecutively occuring primes in the natural number set
+The difference between the square root of 839 and 853 is 0.24066693265922368
+839 and 853 are both consecutively occuring primes in the natural number set
+The difference between the square root of 853 and 857 is 0.06839866493828595
+853 and 857 are both consecutively occuring primes in the natural number set
+The difference between the square root of 857 and 859 is 0.0341394382994622
+857 and 859 are both consecutively occuring primes in the natural number set
+The difference between the square root of 859 and 863 is 0.06815986568108201
+859 and 863 are both consecutively occuring primes in the natural number set
+The difference between the square root of 863 and 877 is 0.23732414410915226
+863 and 877 are both consecutively occuring primes in the natural number set
+The difference between the square root of 877 and 881 is 0.06745841971132904
+877 and 881 are both consecutively occuring primes in the natural number set
+The difference between the square root of 881 and 883 is 0.03367172263097018
+881 and 883 are both consecutively occuring primes in the natural number set
+The difference between the square root of 883 and 887 is 0.06722928571980447
+883 and 887 are both consecutively occuring primes in the natural number set
+The difference between the square root of 887 and 907 is 0.3338954132050276
+887 and 907 are both consecutively occuring primes in the natural number set
+The difference between the square root of 907 and 911 is 0.06633594841696322
+907 and 911 are both consecutively occuring primes in the natural number set
+The difference between the square root of 911 and 919 is 0.13223616336472332
+911 and 919 are both consecutively occuring primes in the natural number set
+The difference between the square root of 919 and 929 is 0.16448856610804796
+919 and 929 are both consecutively occuring primes in the natural number set
+The difference between the square root of 929 and 937 is 0.13095440797042102
+929 and 937 are both consecutively occuring primes in the natural number set
+The difference between the square root of 937 and 941 is 0.06526751408819109
+937 and 941 are both consecutively occuring primes in the natural number set
+The difference between the square root of 941 and 947 is 0.09764189273118973
+941 and 947 are both consecutively occuring primes in the natural number set
+The difference between the square root of 947 and 953 is 0.09733293892350048
+947 and 953 are both consecutively occuring primes in the natural number set
+The difference between the square root of 953 and 967 is 0.2259255483513698
+953 and 967 are both consecutively occuring primes in the natural number set
+The difference between the square root of 967 and 971 is 0.06424935557879508
+967 and 971 are both consecutively occuring primes in the natural number set
+The difference between the square root of 971 and 977 is 0.09612626337911934
+971 and 977 are both consecutively occuring primes in the natural number set
+The difference between the square root of 977 and 983 is 0.09583157685119659
+977 and 983 are both consecutively occuring primes in the natural number set
+The difference between the square root of 983 and 991 is 0.1273216683184728
+983 and 991 are both consecutively occuring primes in the natural number set
+The difference between the square root of 991 and 997 is 0.09515433467458934
+991 and 997 are both consecutively occuring primes in the natural number set
+The mean of the differences of the consecutively occuring primes square roots are: 0.17977864427508852; the median: 0.14548688707873225 the mode(s): [0.03367172 0.03413944 0.03475248 0.03487905 0.03513634 0.03892488
+ 0.03946684 0.04022603 0.04082485 0.04188545 0.04376877 0.04652424
+ 0.04811244 0.04879494 0.05360573 0.05661384 0.05954917 0.06085835
+ 0.06424936 0.0645498  0.06526751 0.06622677 0.06633595 0.06722929
+ 0.06745842 0.06815987 0.06839866 0.06963104 0.07106706 0.0720282
+ 0.07216902 0.07259541 0.07347185 0.07453601 0.07698013 0.07875005
+ 0.08064783 0.08165001 0.08512597 0.08935354 0.09044322 0.09274796
+ 0.09335226 0.09515433 0.09523839 0.09583158 0.09612626 0.09622626
+ 0.09733294 0.09764189 0.09901624 0.10012554 0.10246329 0.10675263
+ 0.10925377 0.11058166 0.11103523 0.11268784 0.11377657 0.11504507
+ 0.11713069 0.11766992 0.11785393 0.11973753 0.12146677 0.12206869
+ 0.12288507 0.1235085  0.12521791 0.12609993 0.12677356 0.12732167
+ 0.12862442 0.1291038  0.13095441 0.13159162 0.13223616 0.13333483
+ 0.13336687 0.1420549  0.14322492 0.14367472 0.14462078 0.14635299
+ 0.14876222 0.15064922 0.15261018 0.15269719 0.15431425 0.15471458
+ 0.15570257 0.15596377 0.15900103 0.16415436 0.16448857 0.17313663
+ 0.17503582 0.17609559 0.17766808 0.17978817 0.18123937 0.18200796
+ 0.18259931 0.18394468 0.18605508 0.18712153 0.18793829 0.18824008
+ 0.18952577 0.18983933 0.19518863 0.1952873  0.19826451 0.19876392
+ 0.20101778 0.20177598 0.2072586  0.20994875 0.21173696 0.21281643
+ 0.22223952 0.22592555 0.22614159 0.23009873 0.23232325 0.23579353
+ 0.23718099 0.23732414 0.24000268 0.24066693 0.24079724 0.24175861
+ 0.24225505 0.24574125 0.25064287 0.25917675 0.26439617 0.27037624
+ 0.27588576 0.28892672 0.29463896 0.29821604 0.31880485 0.32036147
+ 0.32354749 0.33389541 0.34419049 0.36665085 0.37510303 0.38891155
+ 0.39021337 0.40103625 0.40417281 0.40734523 0.40968323 0.41487645
+ 0.41672965 0.41910311 0.42445488 0.43693244 0.5040164  0.51499847
+ 0.51755416 0.58933413 0.63928169 0.67087269]
+
+"""
